@@ -3,7 +3,7 @@
     height: calc(100vh - 120px);
     overflow: hidden;
     position: relative;
-    overflow: hidden;
+    overflow:hidden;
 }
 
 .slider-section img {
