@@ -3,7 +3,6 @@
     height: calc(100vh - 120px);
     overflow: hidden;
     position: relative;
-    overflow:hidden;
 }
 
 .slider-section img {
@@ -125,8 +124,6 @@
     width: 50%;
     opacity: 1;
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0, transparent 80%);
-    opacity: 1;
-    -webkit-transform: translateY(5px);
     transform: translateY(5px);
 }
 
