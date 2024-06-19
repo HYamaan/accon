@@ -1,5 +1,5 @@
 import React from 'react';
-import SliderTeam from "@/Components/HomePageComponent/SliderTeam";
+import SliderTeam from "@/Components/Slider/SliderTeam";
 
 const Experience = () => {
 

@@ -62,7 +62,7 @@ const SliderComponent = () => {
             <div className="slider-container">
                 <Slider {...settings}>
                     <div className="slider-section">
-                        <img src={"/slider-1.jpg"} alt="slider 1"/>
+                        <img src={"slider-1.jpg"} alt="slider 1"/>
                         <div className={`slider-text ${getAnimateClass(0)}`}>
                             <h3>HELPING BUILD A BETTER FUTURE</h3>
                             <p>
@@ -77,7 +77,7 @@ const SliderComponent = () => {
                         </div>
                     </div>
                     <div className="slider-section">
-                        <img src={"/slider-2.jpg"} alt="slider 2"/>
+                        <img src={"slider-2.jpg"} alt="slider 2"/>
                         <div className={`slider-text ${getAnimateClass(1)}`}>
                             <h3>HELPING BUILD A BETTER FUTURE</h3>
                             <p>
