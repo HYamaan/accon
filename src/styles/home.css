@@ -151,6 +151,14 @@
     font-weight: 400;
     text-align: center;
 }
+.chooseUs-section{
+    background-color: white;
+    padding-top: 1rem;
+}
+.chooseUs-section .choose{
+    position: relative;
+    z-index: 1;
+}
 
 .choose-item-row {
     display: flex;
@@ -162,10 +170,12 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: top left;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    object-fit: cover;
+
 }
 
 .choose-right {
@@ -239,10 +249,14 @@
     margin-bottom: 10px;
 }
 
-.portfolio {
-    background-color: #F6F6F6;
+.services-section{
+    background-color: white;
+    padding-top: 1rem;
 }
-
+.services-section .services{
+    position: relative;
+    z-index: 1;
+}
 .portfolio-filter {
     text-align: center;
     margin-top: 20px;
@@ -270,6 +284,14 @@
 
 .portfolio-filter ul li:hover {
     background: #f8be2e;
+}
+.experience-section{
+    background-color: white;
+;
+}
+.experience-section .experience{
+    position: relative;
+    z-index: 1;
 }
 
 .slider-team {
@@ -363,18 +385,21 @@
     }
 }
 .slider-team .arrow:before,
-.slider-recent-post .arrow:before{
+.slider-recent-post .arrow:before,
+.slider-partner .arrow:before{
     content: "" !important;
 }
 .experience .slider-team .arrow svg,
-.recent-post .slider-recent-post .arrow svg{
+.recent-post .slider-recent-post .arrow svg,
+.partners .slider-partner .arrow svg{
     transition: all .6s ease !important;
     transform: translateX(300px);
     opacity: 0;
 }
 
 .slider-team .arrow svg,
-.slider-recent-post .arrow svg{
+.slider-recent-post .arrow svg,
+.slider-partner .arrow svg{
     border: 2px solid black;
     height: 35px;
     width: 35px;
@@ -385,17 +410,20 @@
 
 }
 .slider-team .arrow.slick-prev,
-.slider-recent-post .arrow.slick-prev{
+.slider-recent-post .arrow.slick-prev,
+.slider-partner .arrow.slick-prev{
     top: -3.5rem !important;
     left: unset !important;
     right: 5.5rem !important;
 }
 .slider-team .arrow.slick-next,
+.slider-partner .arrow.slick-next,
 .slider-recent-post .arrow.slick-next{
     top: -3.5rem !important;
     right: 4rem !important;
 }
 .slider-team .arrow:hover svg,
+.slider-partner .arrow:hover svg,
 .slider-recent-post .arrow:hover svg
 {
     color: #f8be2e !important;
@@ -403,6 +431,7 @@
 }
 
 .experience:hover .slider-team .arrow svg,
+.partners:hover .slider-partner .arrow svg,
 .recent-post:hover .slider-recent-post .arrow svg{
     transform: translateX(0);
     opacity: 1;
@@ -504,6 +533,14 @@
 }
 .clear-four:nth-child(4n + 1) {
     clear: both;
+}
+.photo-gallery-section{
+    padding-top: 1rem;
+    background-color: white;
+}
+.photo-gallery-section .photo-gallery{
+    position: relative;
+    z-index: 1;
 }
 .caption-item {
     margin-top: 30px;
@@ -625,7 +662,12 @@
     margin: 0;
 }
 .faq-section{
+    background-color: white;
     padding-top: 30px;
+}
+.faq-section .faq{
+    position: relative;
+    z-index: 1;
 }
 .faq-img{
     margin-top: 30px;
@@ -661,7 +703,7 @@ color : #f8be2e;
 
 .recent-post-section{
     background:rgb(96%,96%, 96%);
-    margin: 2rem 0;
+    padding:1rem 0 2.5rem 0;
 
 }
 .recent-post{
@@ -743,4 +785,13 @@ color : #f8be2e;
     bottom: 20px;
     left: 15px;
 }
-
+.partners{
+    margin-bottom: 1rem;
+}
+.brand-item {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 80px;
+    margin-top: 30px;
+}

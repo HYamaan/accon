@@ -2,13 +2,13 @@ import React from 'react';
 import {LazyLoadImage} from "react-lazy-load-image-component";
 
 const ChooseUs = () => {
-    return <>
-    <div className="container">
-        <div className="headline">
-            <h2>WHY CHOOSE US</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit Deserunt libero voluptate</p>
+    return <section className="chooseUs-section">
+        <div className="container choose">
+            <div className="headline">
+                <h2>WHY CHOOSE US</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit Deserunt libero voluptate</p>
+            </div>
         </div>
-    </div>
         <div className="choose-item-row">
             <div className="col-md-6">
                 <LazyLoadImage
@@ -93,7 +93,7 @@ const ChooseUs = () => {
                 </div>
             </div>
         </div>
-    </>
+    </section>
 };
 
 export default ChooseUs;

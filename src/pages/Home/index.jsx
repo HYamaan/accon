@@ -9,6 +9,7 @@ import PhotoGallery from "@/Components/HomePageComponent/PhotoGallery";
 import CounterupArea from "@/Components/HomePageComponent/CounterupArea";
 import Faq from "@/Components/HomePageComponent/FAQ";
 import RecentPost from "@/Components/HomePageComponent/RecentPost";
+import Partners from "@/Components/HomePageComponent/Partners";
 
 const HomePage = () => {
 
@@ -23,6 +24,7 @@ const HomePage = () => {
         <CounterupArea/>
         <PhotoGallery/>
         <RecentPost/>
+        <Partners/>
 
     </main>
 

@@ -39,16 +39,18 @@ const PhotoGallery = () => {
         },
     ]
    return  <>
-       <div className="container pb-5">
-           <div className="headline">
-               <h2>PHOTO GALLERY</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit Deserunt libero voluptate</p>
+       <div className="photo-gallery-section">
+           <div className="container photo-gallery">
+               <div className="headline">
+                   <h2>PHOTO GALLERY</h2>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit Deserunt libero voluptate</p>
+               </div>
+               <div className="row">
+                   {photoJson.map((photo, index) => {
+                       return <CardPhotoGallery key={index} data={photo}/>
+                   })}
+               </div>
            </div>
-        <div className="row">
-            {photoJson.map((photo,index) => {
-                return <CardPhotoGallery key={index} data={photo}/>
-            })}
-        </div>
        </div>
    </>
 };
