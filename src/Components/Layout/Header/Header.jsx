@@ -79,22 +79,40 @@ const Header = () => {
                         <div className="col-md-8 col-sm-8">
                             <ul className="header-contact">
                                 <li>
-                                    <MdOutlineEmail/>
-                                    <span>info@yourdomain.com</span>
+                                    <a href="mailto:info@yourdomain.com">
+                                        <MdOutlineEmail/>
+                                        <span>info@yourdomain.com</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <IoCall/>
-                                    <span>123-456-7878</span>
+                                    <a href="tel:123-456-7878">
+                                        <IoCall/>
+                                        <span>123-456-7878</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                         <div className="col-md-4 col-sm-4">
                             <div className="header-links">
-                                <FaFacebookF/>
-                                <FaTwitter/>
-                                <FaInstagram/>
-                                <FaLinkedinIn/>
-                                <ImGooglePlus/>
+                                <a href="https://www.facebook.com" target="_blank"
+                                   rel="noopener noreferrer">
+                                    <FaFacebookF/>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                    <FaTwitter/>
+                                </a>
+                                <a href="https://www.instagram.com" target="_blank"
+                                   rel="noopener noreferrer">
+                                    <FaInstagram/>
+                                </a>
+                                <a href="https://www.linkedin.com" target="_blank"
+                                   rel="noopener noreferrer">
+                                    <FaLinkedinIn/>
+                                </a>
+                                <a href="https://plus.google.com" target="_blank"
+                                   rel="noopener noreferrer">
+                                    <ImGooglePlus/>
+                                </a>
                             </div>
                         </div>
                     </div>
