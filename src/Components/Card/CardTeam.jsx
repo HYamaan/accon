@@ -5,16 +5,17 @@ import {FaFacebookF, FaLinkedinIn, FaTwitter} from "react-icons/fa";
 import {TfiYoutube} from "react-icons/tfi";
 
 const CardTeam = ({data}) => {
-    return <div className="team-item">
-        <LazyLoadImage
-            alt={data.url}
-            src={data.url}
-            className="team-photo"
-        />
-        <div className="team-text">
-            <h4>{data.name}</h4>
-            <p>{data.position}</p>
-        </div>
+    return <>
+        <div className="team-item">
+            <LazyLoadImage
+                alt={data.url}
+                src={data.url}
+                className="team-photo"
+            />
+            <div className="team-text">
+                <h4>{data.name}</h4>
+                <p>{data.position}</p>
+            </div>
             <ul className="team-social">
                 <li>
                     <Link href={data.facebook}
@@ -40,7 +41,8 @@ const CardTeam = ({data}) => {
                     </Link>
                 </li>
             </ul>
-    </div>
+        </div>
+    </>
 };
 
 export default CardTeam;

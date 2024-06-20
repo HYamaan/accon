@@ -5,6 +5,7 @@ import Services from "@/Components/HomePageComponent/Services";
 import PortFolio from "@/Components/HomePageComponent/PortFolio";
 import Experience from "@/Components/HomePageComponent/Experience";
 import TestimonialArea from "@/Components/HomePageComponent/TestimonialArea";
+import PhotoGallery from "@/Components/HomePageComponent/PhotoGallery";
 
 const HomePage = () => {
 
@@ -15,6 +16,7 @@ const HomePage = () => {
         <PortFolio/>
         <Experience/>
         <TestimonialArea/>
+        <PhotoGallery/>
     </main>
 
 };

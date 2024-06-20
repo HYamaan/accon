@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -48,10 +49,11 @@ const SliderComponent = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 0,
+        className: "main-slider",
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
-        beforeChange: (oldIndex, newIndex) => {
-            setCurrentSlide(newIndex);
+        afterChange: (current) => {
+            setCurrentSlide(current);
         }
     };
 
@@ -62,7 +64,7 @@ const SliderComponent = () => {
             <div className="slider-container">
                 <Slider {...settings}>
                     <div className="slider-section">
-                        <img src={"slider-1.jpg"} alt="slider 1"/>
+                        <LazyLoadImage src={"slider-1.jpg"} alt="slider 1"/>
                         <div className={`slider-text ${getAnimateClass(0)}`}>
                             <h3>HELPING BUILD A BETTER FUTURE</h3>
                             <p>
@@ -70,14 +72,14 @@ const SliderComponent = () => {
                                 veritatis esse doloremque, quos, quidem quibusdam quae quia quod doloribus. Quisquam,
                                 quae. Quisquam, quae.
                             </p>
-                            <div className="d-md-flex gap-3 justify-content-center">
+                            <div className="d-flex gap-3 justify-content-center">
                                 <button className="primary-button">Read More</button>
                                 <button className="secondary-button">About</button>
                             </div>
                         </div>
                     </div>
                     <div className="slider-section">
-                        <img src={"slider-2.jpg"} alt="slider 2"/>
+                        <LazyLoadImage src={"slider-2.jpg"} alt="slider 2" />
                         <div className={`slider-text ${getAnimateClass(1)}`}>
                             <h3>HELPING BUILD A BETTER FUTURE</h3>
                             <p>
@@ -85,7 +87,7 @@ const SliderComponent = () => {
                                 veritatis esse doloremque, quos, quidem quibusdam quae quia quod doloribus. Quisquam,
                                 quae. Quisquam, quae.
                             </p>
-                            <div className="d-md-flex gap-3 justify-content-center">
+                            <div className="d-flex gap-3 justify-content-center">
                                 <button className="primary-button">Read More</button>
                                 <button className="secondary-button">About</button>
                             </div>
