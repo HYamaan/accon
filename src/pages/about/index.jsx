@@ -9,7 +9,7 @@ const Index = () => {
         }}>
             <div className="bg"></div>
             <div className="banner-text">
-                <h1>News</h1>
+                <h1>About</h1>
             </div>
         </div>
         <div className="bg-white">

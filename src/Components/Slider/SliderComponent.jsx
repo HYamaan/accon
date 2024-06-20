@@ -1,44 +1,51 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Slider from "react-slick";
 import {LazyLoadImage} from "react-lazy-load-image-component";
+import {useRouter} from "next/router";
+import {sliderData} from "@/data/homeSliderJson";
 
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const {className, style, onClick} = props;
     return (
         <div
             className={className}
-            style={{ ...style,
+            style={{
+                ...style,
                 display: "block",
                 position: "absolute",
                 top: "50%",
                 right: "3rem",
                 transform: "translate(0, -50%)",
                 zIndex: "100",
-                cursor: "pointer" }}
+                cursor: "pointer"
+            }}
             onClick={onClick}
         />
     );
 }
 
 function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
+    const {className, style, onClick} = props;
     return (
         <div
             className={`${className}`}
-            style={{ ...style,
+            style={{
+                ...style,
                 display: "block",
                 position: "absolute",
                 top: "50%",
                 left: "1.5rem",
                 transform: "translate(0, -50%)",
                 zIndex: "100",
-                cursor: "pointer" }}
+                cursor: "pointer"
+            }}
             onClick={onClick}
         />
     );
 }
 
 const SliderComponent = () => {
+    const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const settings = {
@@ -50,8 +57,8 @@ const SliderComponent = () => {
         slidesToScroll: 1,
         initialSlide: 0,
         className: "main-slider",
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow/>,
         afterChange: (current) => {
             setCurrentSlide(current);
         }
@@ -63,36 +70,29 @@ const SliderComponent = () => {
         <div className="slider-section">
             <div className="slider-container">
                 <Slider {...settings}>
-                    <div className="slider-section">
-                        <LazyLoadImage src={"slider-1.jpg"} alt="slider 1"/>
-                        <div className={`slider-text ${getAnimateClass(0)}`}>
-                            <h3>HELPING BUILD A BETTER FUTURE</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate,
-                                veritatis esse doloremque, quos, quidem quibusdam quae quia quod doloribus. Quisquam,
-                                quae. Quisquam, quae.
-                            </p>
-                            <div className="d-flex gap-3 justify-content-center">
-                                <button className="primary-button">Read More</button>
-                                <button className="secondary-button">About</button>
+                    {sliderData.map((slide, index) => (
+                        <div key={index} className="slider-section">
+                            <LazyLoadImage src={slide.src} alt={slide.alt} />
+                            <div className={`slider-text ${getAnimateClass(index)}`}>
+                                <h3>{slide.title}</h3>
+                                <p>{slide.description}</p>
+                                <div className="d-flex gap-3 justify-content-center">
+                                    <button
+                                        className="primary-button"
+                                        onClick={() => router.push(slide.primaryButton.link)}
+                                    >
+                                        {slide.primaryButton.text}
+                                    </button>
+                                    <button
+                                        className="secondary-button"
+                                        onClick={() => router.push(slide.secondaryButton.link)}
+                                    >
+                                        {slide.secondaryButton.text}
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="slider-section">
-                        <LazyLoadImage src={"slider-2.jpg"} alt="slider 2" />
-                        <div className={`slider-text ${getAnimateClass(1)}`}>
-                            <h3>HELPING BUILD A BETTER FUTURE</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate,
-                                veritatis esse doloremque, quos, quidem quibusdam quae quia quod doloribus. Quisquam,
-                                quae. Quisquam, quae.
-                            </p>
-                            <div className="d-flex gap-3 justify-content-center">
-                                <button className="primary-button">Read More</button>
-                                <button className="secondary-button">About</button>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </Slider>
             </div>
         </div>

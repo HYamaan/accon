@@ -284,6 +284,9 @@
     margin-left: -4px;
     transition: all 0.4s;
 }
+.portfolio-filter ul li.active {
+    background: #f8be2e;
+}
 
 .portfolio-filter ul li:hover {
     background: #f8be2e;

@@ -61,9 +61,9 @@ const Header = () => {
                         <div className={`menu-bar-pages-sub ${
                             openSubMenu ? 'open' : ''
                         }`}>
-                            <div><Link href={"/"}>About</Link></div>
-                            <div><Link href={"/"}>Gallery</Link></div>
-                            <div><Link href={"/"}>FAQ</Link></div>
+                            <div><Link href={"/about"}>About</Link></div>
+                            <div><Link href={"/gallery"}>Gallery</Link></div>
+                            <div><Link href={"/faq"}>FAQ</Link></div>
                         </div>
                     </div>
                     <div><Link href={"/service"}>Service</Link></div>
@@ -114,14 +114,14 @@ const Header = () => {
                         </div>
                         <div className="col-md-9 col-sm-12 menu-section">
                             <ul className="nav-menu d-flex">
-                                <li>Home</li>
+                                <li onClick={() => router.push('/')}>Home</li>
                                 <li className="nav-pages">
                                     Page
                                     <FaAngleDown className="nav-icon"/>
                                     <ul className="sub-menu">
-                                        <li>About</li>
-                                        <li>Gallery</li>
-                                        <li>FAQ</li>
+                                        <li onClick={() => router.push('/about')}>About</li>
+                                        <li onClick={() => router.push('/gallery')}>Gallery</li>
+                                        <li onClick={() => router.push('/faq')}>FAQ</li>
                                     </ul>
                                 </li>
                                 <li onClick={() => router.push('/service')}>Service</li>
