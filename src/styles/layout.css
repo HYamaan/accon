@@ -14,6 +14,7 @@
 .nav-logo {
     height: 65px;
     width: auto;
+    cursor: pointer;
 }
 
 .nav-icon {

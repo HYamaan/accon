@@ -6,8 +6,10 @@ import {IoCall} from "react-icons/io5";
 import {FaFacebookF, FaInstagram, FaLinkedinIn, FaPlus, FaTwitter} from "react-icons/fa";
 import {ImGooglePlus} from "react-icons/im";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 const Header = () => {
+    const router = useRouter();
     const [isFixed, setIsFixed] = useState(false);
     const [isChanged, setIsChanged] = useState(false);
     const [openSubMenu, setOpenSubMenu] = useState(false);
@@ -37,6 +39,7 @@ const Header = () => {
     const handleClickSubMenu = () => {
         setOpenSubMenu(!openSubMenu);
     }
+
     return (
         <>
             <div className="mean-section">
@@ -63,10 +66,10 @@ const Header = () => {
                             <div><Link href={"/"}>FAQ</Link></div>
                         </div>
                     </div>
-                    <div><Link href={"/"}>Service</Link></div>
-                    <div><Link href={"/"}>Portfolio</Link></div>
-                    <div><Link href={"/"}>Testimonial</Link></div>
-                    <div><Link href={"/"}>News</Link></div>
+                    <div><Link href={"/service"}>Service</Link></div>
+                    <div><Link href={"/portfolio"}>Portfolio</Link></div>
+                    <div><Link href={"/testimonial"}>Testimonial</Link></div>
+                    <div><Link href={"/news"}>News</Link></div>
                     <div><Link href={"/"}>Contact</Link></div>
                 </div>
             </div>
@@ -105,6 +108,7 @@ const Header = () => {
                                 alt="logo"
                                 src={"logo.png"}
                                 className="nav-logo"
+                                onClick={() => router.push('/')}
                             />
 
                         </div>
@@ -120,10 +124,10 @@ const Header = () => {
                                         <li>FAQ</li>
                                     </ul>
                                 </li>
-                                <li>Service</li>
-                                <li>PORTFOLIO</li>
-                                <li>TESTIMONIAL</li>
-                                <li>NEWS</li>
+                                <li onClick={() => router.push('/service')}>Service</li>
+                                <li onClick={() => router.push('/portfolio')}>PORTFOLIO</li>
+                                <li onClick={() => router.push('/testimonial')}>TESTIMONIAL</li>
+                                <li onClick={() => router.push('/news')}>NEWS</li>
                                 <li>CONTACT</li>
                             </ul>
                         </div>
