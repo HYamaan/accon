@@ -251,12 +251,15 @@
 
 .services-section{
     background-color: white;
-    padding-top: 1rem;
+    padding: 1rem 0;
 }
+
 .services-section .services{
     position: relative;
     z-index: 1;
+    padding-bottom:2rem !important;
 }
+
 .portfolio-filter {
     text-align: center;
     margin-top: 20px;
