@@ -9,11 +9,11 @@ const Index = () => {
         }}>
             <div className="bg"></div>
             <div className="banner-text">
-                <h1>Portfolio</h1>
+                <h1>TESTIMONIAL</h1>
             </div>
         </div>
         <div className="bg-white py-2 testimonial-page">
-            <div className="container my-5">
+            <div className="container mb-5">
                 <div className="col-md-12">
                 <SliderTestimonialArea data={testimonialJson}/>
                 </div>
