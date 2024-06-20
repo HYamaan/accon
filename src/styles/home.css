@@ -616,3 +616,37 @@
 .counter-item h4 {
     margin: 0;
 }
+.faq-section{
+    padding-top: 30px;
+}
+.faq-img{
+    margin-top: 30px;
+}
+.faq-img span img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.faq-gallery{
+    margin-top: 20px;
+}
+.faq-gallery h3 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+.faq-gallery h4.sub {
+    margin: 0;
+    color: #5a5a5a;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+#accordionFaq button.accordion-button::after{
+    background-image: url("../../public/expand-arrow.svg");
+}
+#accordionFaq button.accordion-button{
+    color: #fff;
+    background-color: #13233B!important;
+}
+#accordionFaq button.accordion-button:hover{
+color : #f8be2e;
+}

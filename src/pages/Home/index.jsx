@@ -7,6 +7,7 @@ import Experience from "@/Components/HomePageComponent/Experience";
 import TestimonialArea from "@/Components/HomePageComponent/TestimonialArea";
 import PhotoGallery from "@/Components/HomePageComponent/PhotoGallery";
 import CounterupArea from "@/Components/HomePageComponent/CounterupArea";
+import Faq from "@/Components/HomePageComponent/FAQ";
 
 const HomePage = () => {
 
@@ -17,6 +18,7 @@ const HomePage = () => {
         <PortFolio/>
         <Experience/>
         <TestimonialArea/>
+        <Faq/>
         <CounterupArea/>
         <PhotoGallery/>
 
