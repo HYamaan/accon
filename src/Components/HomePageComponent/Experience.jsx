@@ -54,7 +54,7 @@ const Experience = () => {
     return <>
         <div className="container experience">
             <div className="headline">
-                <h2>Services</h2>
+                <h2>EXPERIENCED TEAM</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit Deserunt libero voluptate</p>
             </div>
             <SliderTeam data={experienceJson}/>

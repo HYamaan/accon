@@ -8,6 +8,7 @@ import TestimonialArea from "@/Components/HomePageComponent/TestimonialArea";
 import PhotoGallery from "@/Components/HomePageComponent/PhotoGallery";
 import CounterupArea from "@/Components/HomePageComponent/CounterupArea";
 import Faq from "@/Components/HomePageComponent/FAQ";
+import RecentPost from "@/Components/HomePageComponent/RecentPost";
 
 const HomePage = () => {
 
@@ -21,6 +22,7 @@ const HomePage = () => {
         <Faq/>
         <CounterupArea/>
         <PhotoGallery/>
+        <RecentPost/>
 
     </main>
 
