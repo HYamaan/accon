@@ -70,7 +70,7 @@ const Header = () => {
                     <div><Link href={"/portfolio"}>Portfolio</Link></div>
                     <div><Link href={"/testimonial"}>Testimonial</Link></div>
                     <div><Link href={"/news"}>News</Link></div>
-                    <div><Link href={"/"}>Contact</Link></div>
+                    <div><Link href={"/contact"}>Contact</Link></div>
                 </div>
             </div>
             <div className="header-area">
@@ -128,7 +128,7 @@ const Header = () => {
                                 <li onClick={() => router.push('/portfolio')}>PORTFOLIO</li>
                                 <li onClick={() => router.push('/testimonial')}>TESTIMONIAL</li>
                                 <li onClick={() => router.push('/news')}>NEWS</li>
-                                <li>CONTACT</li>
+                                <li onClick={() => router.push('/contact')}>CONTACT</li>
                             </ul>
                         </div>
                     </div>
