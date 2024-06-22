@@ -36,7 +36,7 @@ const PortfolioFilter = () => {
             <div className="row">
                 {portfolio?.map((item, index) =>
                     <div key={index} className="col-md-4 col-sm-6 col-xs-12 clear-three">
-                        <Card data={item} />
+                        <Card data={item} baseUrl={"portfolio"}/>
                     </div>
                 )}
             </div>

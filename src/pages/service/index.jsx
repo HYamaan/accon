@@ -1,8 +1,9 @@
 import React from 'react';
-import cardJson from "@/data/service";
+import {cardJson} from "@/data/service";
 import Card from "@/Components/Card/Card";
 
 const Service = () => {
+    console.log("cardJson",cardJson)
     return <>
         <div className="banner-slider" style={{
             backgroundImage:"url(banner_service.jpg)",
@@ -17,7 +18,7 @@ const Service = () => {
                 <div className="row">
                     {cardJson.map((item, index) =>
                         <div key={index} className="col-md-4 col-sm-6 col-xs-12 clear-three">
-                            <Card data={item}/>
+                            <Card data={item} baseUrl={"service"}/>
                         </div>
                     )}
                 </div>

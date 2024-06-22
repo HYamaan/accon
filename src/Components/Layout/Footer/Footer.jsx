@@ -11,7 +11,9 @@ const Footer = () => {
                     <div className="footer-contact-item">
                         <ul>
                             <li>
-                                <LazyLoadImage alt="footer_address_icon.png" src={"footer_address_icon.png"}
+                                <LazyLoadImage
+                                    alt="footer_address_icon.png"
+                                    src={"/footer_address_icon.png"}
                                 />
                             </li>
                             <li>
@@ -30,7 +32,9 @@ const Footer = () => {
                     <div className="footer-contact-item">
                         <ul>
                             <li>
-                                <LazyLoadImage alt="footer_phone_icon.png" src={"footer_phone_icon.png"}
+                                <LazyLoadImage
+                                    alt="footer_phone_icon.png"
+                                    src={"/footer_phone_icon.png"}
                                 />
                             </li>
                             <li>
@@ -47,7 +51,9 @@ const Footer = () => {
                     <div className="footer-contact-item">
                         <ul>
                             <li>
-                                <LazyLoadImage alt="footer_working_hour_icon.png" src={"footer_working_hour_icon.png"}
+                                <LazyLoadImage
+                                    alt="footer_working_hour_icon.png"
+                                    src={"/footer_working_hour_icon.png"}
                                 />
                             </li>
                             <li>

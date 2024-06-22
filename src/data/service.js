@@ -1,35 +1,38 @@
-const cardJson = [
+export const cardJson = [
     {
-        url: "service-1.jpg",
+        url: "1",
+        photo: "/service-1.jpg",
         title: "ENGINEERING & DESIGN",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum.Deserunt libero"
+        description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum. Deserunt libero</p>"
     },
     {
-        url: "service-2.jpg",
+        url: "2",
+        photo: "/service-2.jpg",
         title: "INDUSTRY TRAINING",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum.Deserunt libero"
-
+        description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum. Deserunt libero</p>"
     },
     {
-        url: "service-3.jpg",
+        url: "3",
+        photo: "/service-3.jpg",
         title: "PROGRAM MANAGEMENT",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum.Deserunt libero"
+        description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum. Deserunt libero</p>"
     },
     {
-        url: "service-4.jpg",
+        url: "4",
+        photo: "/service-4.jpg",
         title: "ANALYTICS & RESEARCH",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum.Deserunt libero"
+        description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum. Deserunt libero</p>"
     },
     {
-        url: "service-5.jpg",
+        url: "5",
+        photo: "/service-5.jpg",
         title: "DIGITAL ENTERPRISE",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum.Deserunt libero"
+        description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum. Deserunt libero</p>"
     },
     {
-        url: "service-6.jpg",
+        url: "6",
+        photo: "/service-6.jpg",
         title: "HEALTH AND SAFETY",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum.Deserunt libero"
+        description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate voluptatum. Deserunt libero</p>"
     }
 ];
-
-export default cardJson;

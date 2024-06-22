@@ -124,7 +124,7 @@ const Header = () => {
                         <div className="col-md-3 col-sm-12 logo-section">
                             <LazyLoadImage
                                 alt="logo"
-                                src={"logo.png"}
+                                src={"/logo.png"}
                                 className="nav-logo"
                                 onClick={() => router.push('/')}
                             />

@@ -7,8 +7,8 @@ const RecentPostCard = ({data}) => {
     return<>
     <div className="blog-item">
      <LazyLoadImage
-         src={data.url}
-         alt={data.url}
+         src={data.photo}
+         alt={data.photo}
      effect="blur"
      className="blog-photo"
      />
@@ -23,9 +23,9 @@ const RecentPostCard = ({data}) => {
         </div>
         <div className="blog-text">
             <h3><Link href={"/"}>Pri et oratio iisque atomorum, enim detracto</Link></h3>
-            <p>{data.description}</p>
+            <p  dangerouslySetInnerHTML={{__html: data.description}}></p>
             <div className="blog-button">
-                <Link href={"/"} className="secondary-button">Read More</Link>
+                <Link href={`news/${data.url}`} className="secondary-button">Read More</Link>
             </div>
         </div>
     </div>
