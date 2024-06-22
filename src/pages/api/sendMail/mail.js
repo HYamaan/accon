@@ -8,7 +8,7 @@ export default async function handler(req, res) {
             const transporter = nodemailer.createTransport({
                 host: process.env.NODE_MAILER_HOST,
                 port: process.env.NODE_MAILER_PORT,
-                secure: false,
+                secure: true,
                 auth: {
                     user: process.env.NODE_MAILER_USER,
                     pass: process.env.NODE_MAILER_PASS,
