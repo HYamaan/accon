@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {LazyLoadImage} from "react-lazy-load-image-component";
 import {PiUserCircleFill} from "react-icons/pi";
-import Link from "next/link";
+import {useRouter} from "next/router";
 
 const RecentPostCard = ({data}) => {
+    const router = useRouter();
     const [htmlContent, setHtmlContent] = useState('');
 
     useEffect(() => {
@@ -27,10 +28,10 @@ const RecentPostCard = ({data}) => {
             </div>
         </div>
         <div className="blog-text">
-            <h3><Link href={"/"}>Pri et oratio iisque atomorum, enim detracto</Link></h3>
+            <h3>Pri et oratio iisque atomorum, enim detracto</h3>
             <p dangerouslySetInnerHTML={{__html: htmlContent}}></p>
             <div className="blog-button">
-                <Link href={`news/${data.url}`} className="secondary-button">Read More</Link>
+                <div onClick={()=>router.push(`news/${data.url}`)} className="secondary-button">Read More</div>
             </div>
         </div>
     </div>
