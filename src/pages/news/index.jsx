@@ -47,7 +47,7 @@ export default Index;
 export const getServerSideProps = async ({ req }) => {
     const protocol = req.headers['x-forwarded-proto'] || 'http';
     const host = req.headers.host;
-    const siteUrl = `${protocol}://${host}`;
+    const siteUrl = `${protocol}://${host}/news`;
     const siteTitle = "News - Acon";
     const siteDescription = "Stay updated with the latest news and articles from Acon.";
     const ogImage = `${siteUrl}/banner_service.jpg`;

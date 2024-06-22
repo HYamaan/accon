@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {LazyLoadImage} from "react-lazy-load-image-component";
 import Link from "next/link";
+import {recentPostJson} from "@/data/recentPostJson";
 
 const Footer = () => {
+    const [popularProject, setPopularProject] = useState([]);
+    const [latestProject, setLatestProject] = useState([]);
+
+    useEffect(() => {
+        const popularProject = recentPostJson.filter(item => item.popular);
+        const latestProject = recentPostJson.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+        setPopularProject(popularProject);
+        setLatestProject(latestProject);
+        console.log('popularProject', popularProject);
+    }, []);
+
     return <>
         <div className="footer-contact-area">
         <div className="container">
@@ -80,85 +92,51 @@ const Footer = () => {
                     </div>
                     <div className="col-sm-6 col-md-3 col-lg-3 footer-col">
                         <h3>Latest News</h3>
-                        <div className="news-item">
-                            <div className="news-title">
-                                <Link href="/" target="_blank">
-                                    Ex usu vero quaerendum, mei no falli
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="news-item">
-                            <div className="news-title">
-                                <Link href="/" target="_blank">
-                                    Detracto contentiones te est, brute ipsum
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="news-item">
-                            <div className="news-title">
-                                <Link href="/" target="_blank">
-                                    Ad qui quem reprimique, quo possit detracto
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="news-item">
-                            <div className="news-title">
-                                <Link href="/" target="_blank">
-                                    Pri et oratio iisque atomorum, enim detracto
-                                </Link>
-                            </div>
-                        </div>
+                        {
+                            latestProject.map((item, index) => (
+                                <div className="news-item" key={index}>
+                                    <div className="news-title">
+                                        <Link href={`news/${item.url}`} target="_blank">
+                                            {item.title}
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                     <div className="col-sm-6 col-md-3 col-lg-3 footer-col">
                         <h3>Popular News</h3>
-                        <div className="news-item">
-                            <div className="news-title">
-                                <Link href="/" target="_blank">
-                                    Detracto contentiones te est, brute ipsum
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="news-item">
-                            <div className="news-title">
-                                <Link href="/" target="_blank">
-                                    Ex usu vero quaerendum, mei no falli
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="news-item">
-                            <div className="news-title">
-                                <Link href="/" target="_blank">
-                                    Tollit cetero cu usu, etiam evertitur id nec
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="news-item">
-                            <div className="news-title">
-                                <Link href="/" target="_blank">
-                                    Ad qui quem reprimique, quo possit detracto
-                                </Link>
-                            </div>
-                        </div>
+                        {
+                            popularProject.map((item, index) => (
+                                <div className="news-item" key={index}>
+                                    <div className="news-title">
+                                        <Link href={`news/${item.url}`} target="_blank">
+                                            {item.title}
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                     <div className="col-sm-6 col-md-3 col-lg-3 footer-col">
                         <h3>Quick Links</h3>
                         <div className="news-item">
                             <div className="news-title">
-                                <Link href="/" target="_blank">
+                                <Link href="/">
                                     Home
                                 </Link>
                             </div>
                         </div>
                         <div className="news-item">
                             <div className="news-title">
-                                <Link href="/" target="_blank">
+                                <Link href="/terms-and-conditions" >
                                     Terms and Conditions
                                 </Link>
                             </div>
                         </div>
                         <div className="news-item">
                             <div className="news-title">
-                                <Link href="/" target="_blank">
+                                <Link href="/privacy">
                                     Privacy Policy
                                 </Link>
                             </div>

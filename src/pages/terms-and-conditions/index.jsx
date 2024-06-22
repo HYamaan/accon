@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import CardPhotoGallery from "@/Components/Card/CardPhotoGallery";
-import { photoJson } from "@/data/photoJson";
 
 const Index = ({ siteTitle, siteDescription, ogImage, siteUrl, structuredData }) => {
     return (
@@ -22,15 +20,29 @@ const Index = ({ siteTitle, siteDescription, ogImage, siteUrl, structuredData })
             <div className="banner-slider" style={{ backgroundImage: "url(banner_service.jpg)" }}>
                 <div className="bg"></div>
                 <div className="banner-text">
-                    <h1>Gallery</h1>
+                    <h1>Terms And Conditions</h1>
                 </div>
             </div>
-            <div className="photo-gallery-section pb-5 pt-5">
-                <div className="container photo-gallery pb-3">
+            <div className="bg-white">
+                <div className="container privacy-policy">
                     <div className="row">
-                        {photoJson.map((photo, index) => {
-                            return <CardPhotoGallery key={index} data={photo} />
-                        })}
+                        <div className="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis id in inventore iste,
+                                perferendis sapiente velit. Doloribus, esse, sed. Architecto assumenda cumque delectus
+                                dolore exercitationem laborum quae repudiandae ut!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis id in inventore iste,
+                                perferendis sapiente velit. Doloribus, esse, sed. Architecto assumenda cumque delectus
+                                dolore exercitationem laborum quae repudiandae ut!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis id in inventore iste,
+                                perferendis sapiente velit. Doloribus, esse, sed. Architecto assumenda cumque delectus
+                                dolore exercitationem laborum quae repudiandae ut!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis id in inventore iste,
+                                perferendis sapiente velit. Doloribus, esse, sed. Architecto assumenda cumque delectus
+                                dolore exercitationem laborum quae repudiandae ut!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis id in inventore iste,
+                                perferendis sapiente velit. Doloribus, esse, sed. Architecto assumenda cumque delectus
+                                dolore exercitationem laborum quae repudiandae ut!</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,15 +55,15 @@ export default Index;
 export const getServerSideProps = async ({ req }) => {
     const protocol = req.headers['x-forwarded-proto'] || 'http';
     const host = req.headers.host;
-    const siteUrl = `${protocol}://${host}/gallery`;
-    const siteTitle = "Gallery - Accon";
-    const siteDescription = "Explore our photo gallery to see the projects and events we've been involved in.";
+    const siteUrl = `${protocol}://${host}/terms`;
+    const siteTitle = "Terms and Conditions - Accon";
+    const siteDescription = "Read the terms and conditions for using our services at Accon.";
     const ogImage = `${protocol}://${host}/banner_service.jpg`;
     const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME;
 
     const structuredData = {
         "@context": "https://schema.org",
-        "@type": "WebSite",
+        "@type": "WebPage",
         "url": siteUrl,
         "name": siteTitle,
         "description": siteDescription,

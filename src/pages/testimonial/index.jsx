@@ -41,7 +41,7 @@ export default Index;
 export const getServerSideProps = async ({ req }) => {
     const protocol = req.headers['x-forwarded-proto'] || 'http';
     const host = req.headers.host;
-    const siteUrl = `${protocol}://${host}`;
+    const siteUrl = `${protocol}://${host}/testimonial`;
     const siteTitle = "Testimonial - Accon";
     const siteDescription = "Read what our clients have to say about our services. Discover testimonials from satisfied customers.";
     const ogImage = `${siteUrl}/banner_service.jpg`;
@@ -59,7 +59,7 @@ export const getServerSideProps = async ({ req }) => {
             "url": siteUrl,
             "logo": {
                 "@type": "ImageObject",
-                "url": `${siteUrl}/logo.png`
+                "url": `${protocol}://${host}/logo.png`
             }
         }
     };
