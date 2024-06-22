@@ -8,6 +8,7 @@ export default async function handler(req, res) {
             const transporter = nodemailer.createTransport({
                 host: process.env.NODE_MAILER_HOST,
                 port: process.env.NODE_MAILER_PORT,
+                secure: false,
                 auth: {
                     user: process.env.NODE_MAILER_USER,
                     pass: process.env.NODE_MAILER_PASS,
@@ -16,7 +17,7 @@ export default async function handler(req, res) {
             console.log(process.env.NODE_MAILER_HOST)
             const mailOption = {
                 from: email,
-                to: process.env.NODE_MAILER_USER,
+                to: "hakanyaman5249@gmail.com, baz@example.com",
                 subject: "New Contact Us Message",
                 text: `Name: ${name}\nPhone: ${phone}\nMessage: ${message}`,
                 html: `
@@ -24,7 +25,6 @@ export default async function handler(req, res) {
         <h2 style="background-color: #f4f4f4; padding: 10px; text-align: center; border-radius: 10px 10px 0 0;">New Contact Us Message</h2>
         <div style="padding: 20px;">
             <p style="font-size: 16px;"><strong>Name:</strong> ${name}</p>
-             <p style="font-size: 16px;"><strong>Email:</strong> ${email}</p>
             <p style="font-size: 16px;"><strong>Phone:</strong> ${phone}</p>
             <p style="font-size: 16px;"><strong>Message:</strong></p>
             <p style="font-size: 14px; line-height: 1.5; padding: 10px; background-color: #f9f9f9; border-radius: 5px;">${message}</p>
