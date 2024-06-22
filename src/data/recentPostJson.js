@@ -1,6 +1,6 @@
 export const recentPostJson = [
     {
-        url: "1",
+        url: "view/1",
         photo: "/news-1.jpg",
         title: "The Best Investment of Your Life",
         description: "<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne.</p>",
@@ -10,7 +10,7 @@ export const recentPostJson = [
         popular: true
     },
     {
-        url: "2",
+        url: "view/2",
         photo: "/news-2.jpg",
         title: "The Best Investment of Your Life-2",
         description: "<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne.</p>",
@@ -20,7 +20,7 @@ export const recentPostJson = [
         popular: true
     },
     {
-        url: "3",
+        url: "view/3",
         photo: "/news-3.jpg",
         title: "The Best Investment of Your Life-3",
         description: "<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne.</p>",
@@ -30,7 +30,7 @@ export const recentPostJson = [
         popular: true
     },
     {
-        url: "4",
+        url: "view/4",
         photo: "/news-4.jpg",
         title: "The Best Investment of Your Life-4",
         description: "<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne.</p>",
@@ -40,7 +40,7 @@ export const recentPostJson = [
         popular: false
     },
     {
-        url: "5",
+        url: "view/5",
         photo: "/news-5.jpg",
         title: "The Best Investment of Your Life-5",
         description: "<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne.</p>",
@@ -50,7 +50,7 @@ export const recentPostJson = [
         popular: false
     },
     {
-        url: "6",
+        url: "view/6",
         photo: "/news-6.jpg",
         title: "The Best Investment of Your Life-6",
         description: "<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne.</p>",

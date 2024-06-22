@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import SliderComponent from "@/Components/Slider/SliderComponent";
 import ChooseUs from "@/Components/HomePageComponent/ChooseUs";
 import Services from "@/Components/HomePageComponent/Services";
@@ -12,22 +13,24 @@ import RecentPost from "@/Components/HomePageComponent/RecentPost";
 import Partners from "@/Components/HomePageComponent/Partners";
 
 const HomePage = () => {
+    return (
+        <main>
 
-    return <main>
-        <SliderComponent/>
-        <ChooseUs/>
-        <Services/>
-        <PortFolio/>
-        <Experience/>
-        <TestimonialArea/>
-        <Faq/>
-        <CounterupArea/>
-        <PhotoGallery/>
-        <RecentPost/>
-        <Partners/>
-
-    </main>
-
+            <SliderComponent />
+            <ChooseUs />
+            <Services />
+            <PortFolio />
+            <Experience />
+            <TestimonialArea />
+            <Faq />
+            <CounterupArea />
+            <PhotoGallery />
+            <RecentPost />
+            <Partners />
+        </main>
+    );
 };
 
 export default HomePage;
+
+

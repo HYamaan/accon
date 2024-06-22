@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {LazyLoadImage} from "react-lazy-load-image-component";
 import {PiUserCircleFill} from "react-icons/pi";
 import Link from "next/link";
 
 const RecentPostCard = ({data}) => {
+    const [htmlContent, setHtmlContent] = useState('');
+
+    useEffect(() => {
+        setHtmlContent(data.description);
+    }, [data.description]);
     return<>
     <div className="blog-item">
      <LazyLoadImage
@@ -23,7 +28,7 @@ const RecentPostCard = ({data}) => {
         </div>
         <div className="blog-text">
             <h3><Link href={"/"}>Pri et oratio iisque atomorum, enim detracto</Link></h3>
-            <p  dangerouslySetInnerHTML={{__html: data.description}}></p>
+            <p dangerouslySetInnerHTML={{__html: htmlContent}}></p>
             <div className="blog-button">
                 <Link href={`news/${data.url}`} className="secondary-button">Read More</Link>
             </div>
