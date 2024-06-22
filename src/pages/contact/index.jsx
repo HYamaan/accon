@@ -2,10 +2,20 @@ import React from 'react';
 import Head from 'next/head';
 import { useFormik } from "formik";
 import { contactSchema } from "@/schema/contact";
+import axios from "axios";
+import {toast} from "react-toastify";
 
 const Index = ({ siteTitle, siteDescription, ogImage, siteUrl, structuredData }) => {
     const onSubmit = async (values, actions) => {
-        // Form submission logic here
+
+        const response =await axios.post('/api/sendMail/mail', values);
+        if(response.status === 200) {
+            toast.success("Your message has been sent successfully.");
+            actions.resetForm();
+        }else{
+            toast.error("An error occurred while sending your message. Please try again later.");
+        }
+
     }
 
     const ContactFormik = useFormik({

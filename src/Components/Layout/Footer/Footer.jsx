@@ -12,7 +12,6 @@ const Footer = () => {
         const latestProject = recentPostJson.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
         setPopularProject(popularProject);
         setLatestProject(latestProject);
-        console.log('popularProject', popularProject);
     }, []);
 
     return <>

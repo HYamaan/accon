@@ -161,7 +161,6 @@ export const getServerSideProps = async ({ params, req }) => {
     const fullUrl = `${protocol}://${host}${req.url}`;
     const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME;
     const companyUrl = process.env.NEXT_PUBLIC_COMPANY_URL;
-    console.log("----------",params)
     const project = recentPostJson.find(item => item.url === params.slug.join('/'));
 
     if (project) {
