@@ -2,8 +2,8 @@ import React from 'react';
 import {cardJson} from "@/data/service";
 import Card from "@/Components/Card/Card";
 
-const Service = () => {
-    console.log("cardJson",cardJson)
+const Service = ({cardInfo}) => {
+    console.log(cardInfo)
     return <>
         <div className="banner-slider" style={{
             backgroundImage:"url(banner_service.jpg)",
@@ -16,7 +16,7 @@ const Service = () => {
         <section className="services-section">
             <div className="container services">
                 <div className="row">
-                    {cardJson.map((item, index) =>
+                    {cardInfo.map((item, index) =>
                         <div key={index} className="col-md-4 col-sm-6 col-xs-12 clear-three">
                             <Card data={item} baseUrl={"service"}/>
                         </div>
@@ -28,3 +28,11 @@ const Service = () => {
 };
 
 export default Service;
+
+export const getServerSideProps = async () => {
+    return {
+        props: {
+            cardInfo: cardJson
+        }
+    }
+}
